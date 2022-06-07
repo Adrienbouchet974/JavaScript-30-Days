@@ -1,3 +1,4 @@
+    //fetching the keyCode of an input from keyboard events
     function play_sound(e){
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -19,10 +20,12 @@
             return;
         }
         
+        //remove the class when the sounds stops playing
         this.classList.remove('playing');
     }
     
     const keys = document.querySelectorAll('.key');
+    
     keys.forEach(key => key.addEventListener('transitionend', remove_transition));
     
     window.addEventListener('keydown', play_sound);

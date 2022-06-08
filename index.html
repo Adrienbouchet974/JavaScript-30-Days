@@ -5,40 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Drum kit</title>
+    <script type="text/javascript" src="main.js" deffer></script>
+    <title>Clock</title>
 </head>
 <body>
     
-    <div class="keys">
-        <div data-key="81" class="key">
-            <kbd>A</kbd>
-            <span class="sound">Clap</span>
-        </div>
-        <div data-key="87" class="key">
-            <kbd>Z</kbd>
-            <span class="sound">Boom</span>
-        </div>
-        <div data-key="69" class="key">
-            <kbd>E</kbd>
-            <span class="sound">Hi-Hat</span>
-        </div>
-        <div data-key="82" class="key">
-            <kbd>R</kbd>
-            <span class="sound">Kick</span>
-        </div>
-        <div data-key="84" class="key">
-            <kbd>T</kbd>
-            <span class="sound">Open Hat</span>
+    <div class="clock">
+        <div class="clock_face">
+            <div class="hour_hand"></div>
+            <div class="min_hand"></div>
+            <div class="sec_hand"></div>
         </div>
     </div>
     
-    <audio data-key="65" src="sounds/basic-clap.wav"></audio>
-    <audio data-key="90" src="sounds/boom-kick.wav"></audio>
-    <audio data-key="69" src="sounds/hi-hat-01.wav"></audio>
-    <audio data-key="82" src="sounds/kick-08.wav"></audio>
-    <audio data-key="84" src="sounds/open-hat.wav"></audio>
-
-    <script type="text/javascript" src="main.js"></script>
-
 </body>
 </html>

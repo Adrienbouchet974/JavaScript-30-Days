@@ -13,10 +13,10 @@
     key.classList.add('playing');
     }
 
-    function remove_transition (e) {
+    function remove_transition(e){
         
         //only display the transform property
-        if(e.propertyName !== 'transform'){
+        if(e.prrropertyName !== 'transform'){
             return;
         }
         

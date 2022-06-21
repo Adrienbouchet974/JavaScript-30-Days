@@ -1,17 +1,10 @@
-//sélectionne tous les input
-const inputs = document.querySelectorAll('.controls input');
-console.log(inputs);
+const inventeurs = [
+    { first: "Albert", last: "Einstein", year: 1879, mort: 1955 },
+    { first: "Isaac", last: "Newton", year: 1643, mort: 1727 },
+    { first: "Galileo", last: "Galilei", year: 1564, mort: 1642 },
+    { first: "Marie", last: "Curie", year: 1867, mort: 1934 },
+    { first: "Johannes", last: "Kepler", year: 1571, mort: 11630 },
+]
 
-//fonction pour changer la valeurs des variables
-function handle_update(){
 
-    //récupère le data-sizing des inputs
-    const suffix = this.dataset.sizing || '';
-
-    //on sélectionne le document dans son intégralité et on lui attribut les propriétées des inputs ( ici les variables CSS )
-    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-}
-
-//Pour chaque inputs on lui indique un changement ou un mouvement du pointeur de la souris, et si c'est le cas, la fonction s'active.
-inputs.forEach(input => input.addEventListener("change", handle_update));
-inputs.forEach(input => input.addEventListener("mousemove", handle_update));
+const personne = ["Beck, Glenn", "Becker, Carl", "Beckett, Samuel", "Beddoes, Mick", "Beecher, Henry", "Beethoven, Ludwig", "Begin, Menachem", "Belloc, Hilaire", "Bellow, Saul", "Benchley,Robert", "Benenson, Peter", "Ben-Gurion, David", "Benjamin, Walter", "Benn, Tony", "Bennington, Chester", "Benson, Leana", "Bent, Silas", "Bentsen, Lloyd", "Berger, Ric", "Bergman, Ingmar", "Berio, Luciano", "Berle, Milton", "Berling, Irving", "Berne, Eric", "Bernhard, Sandra", "Berra, Yogi", "Berry, Halle", "Berry, Wendell", "Betea, Erin", "Bevan, Aneurin", "Bevel, Ken", "Biden, Joseph", "Bierce, Ambrose", "Biko, Steve", "Billings, Josh", "Biondo, Frank", "Birrell, Augustine", "Black, Elk", "Blair, Robert", "Blair, Tony", "Blake, William"];

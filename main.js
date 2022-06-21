@@ -28,4 +28,9 @@ console.log(fifteen);
 // Affiche les résultats sous forme de tableau.
 console.table(fifteen)
 
+
+
 // Array.prototype.map
+// Affiche tout les first & last de l'array inventeurs sous forme d'Array.
+const fullNames = inventeurs.map(inventeur => `${inventeur.first} ${inventeur.last}`);
+console.log(fullNames);

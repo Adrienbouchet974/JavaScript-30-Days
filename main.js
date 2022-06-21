@@ -14,7 +14,7 @@ const personne = ["Beck, Glenn", "Becker, Carl", "Beckett, Samuel", "Beddoes, Mi
 // Filtre les personnes nées en 1500 ou plus et mortes en 1600 ou moins.
 /*
 Cette manière d'écrire fonctionne :
-const fifteen = inventeurs.filter( inventeur => inventeur.year >= 1500 && inventeur.year <= 1600 )
+const fifteen = inventeurs.filter( inventeur => (inventeur.year >= 1500 && inventeur.year <= 1600 ))
 */
 const fifteen = inventeurs.filter(function(inventeur){
     if(inventeur.year >= 1500 && inventeur.year <= 1600) {

@@ -80,17 +80,21 @@ console.table(oldest);
 
 // Créer une liste des boulevards de Paris contenant "de" n'importe où dans le nom
 // lien : https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-const category = document.querySelector(".mw-category");
-const links = Array.from(category.querySelectorAll("a"));
+// const category = document.querySelector(".mw-category");
+// const links = Array.from(category.querySelectorAll("a"));
 
-const de = links
-                .map(link => link.textContent)
-                .filter(streetName => streetName.includes("de"))
+// const de = links
+//                 .map(link => link.textContent)
+//                 .filter(streetName => streetName.includes("de"))
 
 
 // exercise de filtrage
 // filtrer les persnnes par ordre alphabétique du lastName.
-
+const alpha = people.sort((lastOne, nextOne) => {
+    const [aLast, aFirst] = lastOne.split(", ");
+    const [bLast, bFirst] = nextOne.split(", ");
+    return aLast > bLast ? 1 : -1;
+})
 
 
 

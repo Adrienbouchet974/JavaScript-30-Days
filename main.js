@@ -46,6 +46,10 @@ const ordered = inventeurs.sort(function(firstPerson, secondPerson) {
         return -1;
     }
 })
+/*
+Version raccourcie :
+const ordered = inventeurs.sort((a, b) => a.year > b.year ? 1 : -1)
+*/
 console.table(ordered);
 
 

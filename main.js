@@ -88,6 +88,7 @@ console.table(oldest);
 //                 .filter(streetName => streetName.includes("de"))
 
 
+
 // exercise de filtrage
 // filtrer les persnnes par ordre alphabétique du lastName.
 const alpha = people.sort((lastOne, nextOne) => {
@@ -98,27 +99,14 @@ const alpha = people.sort((lastOne, nextOne) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// exercise de réduction
+// reduire le nombre de valeurs dans la const data.
 const data = ["car", "car", "truck", "truck", "bike", "walk", "car", "van", "bike", "walk", "car", "van", "car", "truck"];
+
+const transportation = data.reduce(function(obj, item) {
+    if(!obj[item]){
+        obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+}, {})

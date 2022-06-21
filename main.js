@@ -34,3 +34,31 @@ console.table(fifteen)
 // Affiche tout les first & last de l'array inventeurs sous forme d'Array.
 const fullNames = inventeurs.map(inventeur => `${inventeur.first} ${inventeur.last}`);
 console.log(fullNames);
+
+
+
+// Array.prototype.sort()
+// filtre les inventeurs par date de naissances, du plus vieux au plus jeune
+const ordered = inventeurs.sort(function(firstPerson, secondPerson) {
+    if(firstPerson.year > secondPerson.year) {
+        return 1;
+    }else{
+        return -1;
+    }
+})
+console.table(ordered);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const data = ["car", "car", "truck", "truck", "bike", "walk", "car", "van", "bike", "walk", "car", "van", "car", "truck"];

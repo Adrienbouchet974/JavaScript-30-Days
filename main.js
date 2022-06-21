@@ -19,14 +19,14 @@ const fifteen = inventeurs.filter( inventeur => (inventeur.year >= 1500 && inven
 const fifteen = inventeurs.filter(function(inventeur){
     if(inventeur.year >= 1500 && inventeur.year <= 1600) {
         return true; // tu le gardes !
-    }
-})
+    };
+});
 
 // Affiche les résultats sous forme d'Array.
 console.log(fifteen);
 
 // Affiche les résultats sous forme de tableau.
-console.table(fifteen)
+console.table(fifteen);
 
 
 
@@ -44,8 +44,8 @@ const ordered = inventeurs.sort(function(firstPerson, secondPerson) {
         return 1;
     }else{
         return -1;
-    }
-})
+    };
+});
 /*
 Version raccourcie :
 const ordered = inventeurs.sort((a, b) => a.year > b.year ? 1 : -1)
@@ -54,11 +54,13 @@ console.table(ordered);
 
 
 
+// Array.prototype.reduce()
+// Nous indique combien d'années cumulées les inventeurs ont vécus.
+const totalYears = inventeurs.reduce((total, inventeur) => {
+    return total + (inventeur.mort - inventeur.year);
+}, 0);
 
-
-
-
-
+console.log(totalYears);
 
 
 

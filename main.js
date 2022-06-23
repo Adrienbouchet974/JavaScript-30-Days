@@ -13,5 +13,22 @@ function findMatches(wordToMatch, cities){
 }
 
 function displayMatches(){
-    
+    const matchArray = findMatches(this.value, cities);
+    const html = matchArray.map( place => {
+        const regex = new RegExp(this.value, "gi");
+        const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+        return `
+        <li>
+            <span class="name">${cityName}, ${place.state}</span>
+            <span class="population">${place.population}</span>
+        </li>
+        `
+    }).join("");
+    suggestions.innerHTML = html;
 }
+
+
+
+const inputSearch = document.querySelector(".text");
+const suggestions = document.querySelector(".suggestions");
+inputSearch.addEventListener("keyup", displayMatches);

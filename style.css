@@ -1,0 +1,16 @@
+html {
+    background: #ffc600;
+}
+
+.form-etat {
+    display: flex;
+    justify-content: space-around;
+}
+
+.text {
+    border: 2px solid white;
+    border-radius: 1em;
+    text-align: center;
+    width: 50%;
+    font-size: 50px;
+}

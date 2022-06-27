@@ -46,9 +46,27 @@ var comment = comments.find(function(comment) {
     }
 });
 
-console.log(comment)
+console.log(comment);
 
 // version simplifiée
-comment = comments.find(comment => comment.id === 823423)
+comment = comments.find(comment => comment.id === 823423);
 
-console.log(comment)
+console.log(comment);
+
+
+
+// Array.prototype.findIndex()
+// version complète
+const index = comments.findIndex(comment => comment.id === 823423);
+console.log(index);
+
+// pour supprimer
+// comments.splice(index, 1);
+// console.table(comments);
+// ou
+const newComments = [
+    ...comments.slice(0, index),
+    ...comments.slice(index + 1)
+];
+
+console.log(newComments);

@@ -15,7 +15,7 @@ const comments = [
 
 
 // Array.prototype.some()
-// version normal
+// version complète
 let isAdult = people.some(function(person) {
     const currentYear = (new Date()).getFullYear();
     if(currentYear - person.year >= 19) {
@@ -28,7 +28,7 @@ console.log({isAdult})
 //version simplifiée
 isAdult = people.some(person => (new Date()).getFullYear() - person.year >= 19);
 
-console.log(isAdult);
+console.log({isAdult});
 
 
 
@@ -36,3 +36,19 @@ console.log(isAdult);
 const allAdults = people.every(person => (new Date()).getFullYear() - person.year >= 19);
 
 console.log({allAdults});
+
+
+// Array.prototype.find()
+// version complète
+var comment = comments.find(function(comment) {
+    if(comment.id === 823423) {
+        return true;
+    }
+});
+
+console.log(comment)
+
+// version simplifiée
+comment = comments.find(comment => comment.id === 823423)
+
+console.log(comment)

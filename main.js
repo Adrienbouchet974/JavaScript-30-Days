@@ -23,9 +23,16 @@ let isAdult = people.some(function(person) {
     }
 });
 
-console.log(isAdult)
+console.log({isAdult})
 
 //version simplifiée
 isAdult = people.some(person => (new Date()).getFullYear() - person.year >= 19);
 
 console.log(isAdult);
+
+
+
+// Array.prototype.every()
+const allAdults = people.every(person => (new Date()).getFullYear() - person.year >= 19);
+
+console.log({allAdults});
